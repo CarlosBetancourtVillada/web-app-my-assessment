@@ -1,1 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+::-webkit-scrollbar {
+  width: 7px;
+  z-index: 10;
+  position: fixed;
+  right: 10%;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  border-radius: 7px;
+}
+
+.tableRow {
+  cursor: pointer !important;
+}
+
+#searchclear {
+  cursor: pointer !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+/* Margin bottom by footer height */
+margin-bottom: 100px;
+}
+
+.input__search{
+  min-width: 25%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px;
+  background-color: #2e3740 !important;
+}
+
+.bg-dark{
+  background-color: #2e3740 !important;
+}
+
+.gridResultsPortrait{
+  height: 1000px;
+  width: 700px;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  flex-wrap: wrap;
+  overflow: scroll;
+  padding: 10px;
+}
+
+// .gridResultsPortrait .result{
+//   float: right;
+// }
+
+.gridResultsLandscape{
+  height: 700px;
+  width: 1000px;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  flex-wrap: wrap;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.result{
+  height: 200px !important;
+  width: 200px !important;
+  margin-top: 10px !important;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  object-fit: contain;
+}
+
+.result > span {
+  width: 60px;
+  position: relative;
+  top: 70px; left: 70px;
+}
+

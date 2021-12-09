@@ -1,0 +1,16 @@
+{
+  "name": "my-assessment",
+  "version": "1.0.0",
+  "description": "web project made with Angular by Carlos Betancourt",
+  "main": "index.js",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "author": "Carlos Betancourt",
+  "license": "ISC"
+}
