@@ -10,7 +10,7 @@ export class ResultViewComponent implements OnInit {
 
   isPortrait: boolean = true;
   list: ListingModel[];
-  newList: ListingModel[];
+  newList: ListingModel[] = [];
   message: string = "";
 
   constructor(private listingService: ListingService) { }
@@ -21,11 +21,8 @@ export class ResultViewComponent implements OnInit {
     .subscribe((result) => {
       this.list = result;
       this.message = "";
-      this.list.forEach(element => {
-        console.log(element.image_List);
-      });
-      this.mapList(this.list);
-      //console.log(this.lista);
+      console.log("Original result: %o", this.list);
+      this.mapList();
     });
   }
 
@@ -35,16 +32,17 @@ export class ResultViewComponent implements OnInit {
     this.isPortrait = !this.isPortrait;
   }
 
-  mapList(currentList: ListingModel[]){
+  mapList(){
+    //console.log("Size: " + this.list.length);
     this.list.forEach(listing => {
-      console.log(listing);
-      let temp = listing;
-      temp.image_List = temp.image_List.includes("|") ?
-            temp.image_List.substring(0, temp.image_List.indexOf("|")) :
-            temp.image_List;
-      this.newList.push(temp)
+      if(listing.image_List){
+        let temp = listing;
+        temp.image_List = temp.image_List.includes("|") ?
+              temp.image_List.substring(0, temp.image_List.indexOf("|")) :
+              temp.image_List;
+        this.newList.push(temp);
+      }
     });
-    console.log("Tamaño: " + this.newList.length);
-    console.log("Nueva lista: %o", this.newList.slice(0, 30));
+    console.log("Size: " + this.newList.length);
   }
 }

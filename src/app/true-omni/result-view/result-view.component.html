@@ -5,9 +5,8 @@
 
   <div class="gridResultsPortrait justify-content-between d-flex" [ngClass]="{'gridResultsLandscape': !isPortrait}">
     <div class="w-100 text-center" *ngIf="!list"><span>{{message}}</span></div>
-    <div class="result d-flex align-items-center " *ngFor="let list of list; index as i">
-        <img src="http://2258.mobimanage.com/images/listings/32358_Woodland_Trail.jpg" alt="" style="width: 200px; height: 200px">
-        <span class="text-center w-100"> Title {{ i }}</span>
+    <div class="result d-flex align-items-center" [ngStyle]="{'background-image': 'url(' + list.image_List + ')'}" *ngFor="let list of newList; index as i">
+      <span class="text-center fs-24 black"><b>Title {{ i }}</b></span>
     </div>
   </div>
 </div>

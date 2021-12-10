@@ -92,11 +92,32 @@ margin-bottom: 100px;
   border-style: solid;
   border-color: black;
   object-fit: contain;
+  // background-image: url("http://2258.mobimanage.com/images/listings/32358_Woodland_Trail.jpg");
+  background-size: cover;
 }
 
-.result > span {
-  width: 60px;
-  position: relative;
-  top: 70px; left: 70px;
+// .result::before{
+//   content: "";
+//   background-image: url("http://2258.mobimanage.com/images/listings/32358_Woodland_Trail.jpg");
+//   background-size: cover;
+//   position: relative;
+//   top: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   left: 0px;
+//   opacity: 0.75;
+//   height: 200px !important;
+//   width: 200px !important;
+// }
+
+.result span {
+  width: 100%;
 }
 
+.fs-24{
+  font-size: 24px !important;
+}
+
+.black{
+  color: black !important;
+}
